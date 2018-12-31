@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {FormBuilder, FormGroup, Validator, Validators} from "@angular/forms";
 import {HomePage} from '../home/home';
 import {AuthService} from "../../services/auth.service";
+import {TabsPage} from "../tabs/tabs";
+import {LogoutPage} from "../logout/logout";
 /**
  * Generated class for the SignUpPage page.
  *
@@ -38,7 +40,7 @@ export class SignUpPage {
           password: data.password,
       };
       this.auth.signUp(credentials).then(
-        () => this.navCtrl.setRoot(HomePage),
+        () => this.navCtrl.setRoot(LogoutPage),
         error => this.signUpError = error.message,
       );
   }

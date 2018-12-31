@@ -4,6 +4,8 @@ import {AuthService} from "../../services/auth.service";
 import {SignUpPage} from "../sign-up/sign-up";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {HomePage} from "../home/home";
+import {TabsPage} from "../tabs/tabs";
+import {LogoutPage} from "../logout/logout";
 
 
 /**
@@ -46,7 +48,7 @@ export class LoginPage {
 
     this.auth.signInWithEmail(credentials)
         .then(
-          () => this.navCtrl.setRoot(HomePage),
+          () => this.navCtrl.setRoot(LogoutPage),
           error => this.loginError = error.message,
         );
   }
