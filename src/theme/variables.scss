@@ -44,10 +44,22 @@ $colors: (
 
 //MY VARIABLES
 $toolbar-background: #3498db;
+ion-avatar > img{
+
+  border-radius: 50%;
+  height: 14rem;
+  width: 14rem;
+}
+
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
+$segment-button-ios-border-width: .5px;
+$segment-button-ios-height: 0px;
+$segment-button-ios-opacity-activated: 1;
+$segment-button-ios-icon-size: 100%;
+$tabs-ios-tab-icon-color-active: #3498db;
 
 
 
@@ -55,6 +67,7 @@ $toolbar-background: #3498db;
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+$tabs-md-tab-icon-color-active: #3498db;
 
 
 
