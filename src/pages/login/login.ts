@@ -54,7 +54,10 @@ export class LoginPage {
   }
 
   loginWithGoogle(){
-
+      this.auth.signInWithGoogle().then(
+        ()=> this.navCtrl.setRoot(LogoutPage),
+        error => console.log(error.message),
+      );
   }
 
   signup(){

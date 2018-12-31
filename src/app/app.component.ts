@@ -35,12 +35,5 @@ export class MyApp {
   }
 
 
-
-
-  openPage(page){
-    this.menu.close();
-    this.nav.setRoot(page);
-  }
-
 }
 
