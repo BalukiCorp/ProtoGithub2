@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {AuthService} from "../../services/auth.service";
 import {SignUpPage} from "../sign-up/sign-up";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {HomePage} from "../home/home";
 
 
 /**
@@ -43,15 +44,20 @@ export class LoginPage {
       password: data.password,
     };
 
-    this.auth.signInWithEmail(credentials);
+    this.auth.signInWithEmail(credentials)
+        .then(
+          () => this.navCtrl.setRoot(HomePage),
+          error => this.loginError = error.message,
+        );
+  }
+
+  loginWithGoogle(){
 
   }
 
-
-itemTapped(){
+  signup(){
     this.navCtrl.push(SignUpPage);
-}
-
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');

@@ -14,14 +14,22 @@ export class AuthService {
           this.user = user;
       });
     }
+  //Login - Registro con Email
     signInWithEmail(credentials){
         console.log('Iniciando sesion con email');
         return this.afAuth.auth.signInWithEmailAndPassword(credentials.email, credentials.password);
     }
 
 
-    //Login - Registro con Email
+
 
 
     //Login - Registro con Google Account
+
+
+    //SignUP - Con Email
+
+    signUp(credentials){
+        return this.afAuth.auth.createUserWithEmailAndPassword(credentials.email, credentials.password);
+    }
 }
