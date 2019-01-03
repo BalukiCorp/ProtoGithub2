@@ -3,8 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {AuthService} from "../../services/auth.service";
 import {SignUpPage} from "../sign-up/sign-up";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {HomePage} from "../home/home";
-import {TabsPage} from "../tabs/tabs";
 import {LogoutPage} from "../logout/logout";
 
 
@@ -56,7 +54,7 @@ export class LoginPage {
   loginWithGoogle(){
       this.auth.signInWithGoogle().then(
         ()=> this.navCtrl.setRoot(LogoutPage),
-        error => console.log(error.message),
+        error => console.log(error.message)
       );
   }
 

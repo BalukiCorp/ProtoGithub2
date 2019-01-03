@@ -5,6 +5,7 @@ import {HomePage} from '../home/home';
 import {AuthService} from "../../services/auth.service";
 import {TabsPage} from "../tabs/tabs";
 import {LogoutPage} from "../logout/logout";
+import * as firebase from 'firebase';
 /**
  * Generated class for the SignUpPage page.
  *
@@ -21,6 +22,10 @@ export class SignUpPage {
 
     signUpError: string;
     form: FormGroup;
+    name: string = '';
+    gender: string = '';
+    username: string = '';
+    register = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private fb: FormBuilder, private auth:AuthService) {
 
@@ -29,8 +34,26 @@ export class SignUpPage {
         password:['',Validators.compose([Validators.required, Validators.minLength(6)])],
       });
 
+    this.getRegister();
+
   }
 
+  sendRegister(){
+    var registerRef = firebase.database().ref().child("registro");
+    registerRef.push({nombre: this.name, genero: this.gender, usuario: this.username});
+  }
+
+  getRegister(){
+    var registerRef = firebase.database().ref().child("registro");
+
+    registerRef.on("value", (snap) => {
+      var dataInDatabase = snap.val();
+      this.register = [];
+      for(var key in dataInDatabase){
+        this.register.push(dataInDatabase[key]);
+      }
+    });
+  }
 
 
   signup(){

@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {AngularFireAuth} from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import AuthProvider = firebase.auth.AuthProvider;
-import {assertLessThan} from "@angular/core/src/render3/assert";
+
 
 @Injectable()
 
@@ -34,7 +34,7 @@ export class AuthService {
               ()=>{
                 return this.afAuth.auth.getRedirectResult().then(
                   result=>{
-                    let token = result.credential.accessToken;
+                    let token = result.credential;
                     let user = result.user;
                     console.log( token,user);
                   }
@@ -50,13 +50,14 @@ export class AuthService {
 
 
   // Agarrar si el ingreso a sido autenticado --> Uso en Logout!
-    get autheticated():boolean{
+    get authenticated():boolean{
       return this.user !== null;
     }
+
   //Agarrar si el Email fue ingresado
-    public getEmail(){
-      return this.user && this.user.email;
-    }
+     public getEmail(){
+        return this.user && this.user.email;
+     }
     //Cerrar Sesion
     signOut(): Promise<void> {
       return this.afAuth.auth.signOut();

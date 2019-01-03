@@ -13,6 +13,27 @@
 
 </ion-header>
 <ion-content>
+    <ion-item>
+    <ion-input [(ngModel)]="name" type="text" placeholder="Ingresar Nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input [(ngModel)]="username" type="text" placeholder="Ingresar Nombre de Usuario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+
+        <ion-label>Género</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="female">Mujer</ion-option>
+        <ion-option value="male">Hombre</ion-option>
+        <ion-option value="Other">Otro</ion-option>
+        <ion-option value="Event">Evento</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+
 <form (ngSubmit)="signup()" [formGroup]="form">
   <ion-list inset>
     <ion-item [ngClass]="{invalid: emailErrors.hasError('*', ['touched'])}">
@@ -35,7 +56,7 @@
   <div padding-horizontal>
     <div class="form-error">{{signUpError}}</div>
 
-    <button ion-button full type="submit" [disabled]="!form.valid">Registrarse</button>
+    <button ion-button full type="submit" [disabled]="!form.valid" (click)="sendRegister()">Registrarse</button>
   </div>
 
 </form>
