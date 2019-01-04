@@ -1,0 +1,37 @@
+[33mcommit de107a638270cd4fddef7802ba7d6ff9f2f2b794[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: DeathScript <robochoa@est.ecotec.edu.ec>
+Date:   Mon Dec 31 00:31:15 2018 -0500
+
+    [Update]: Login - Register
+    
+    Actualizacion: Se activa boton Google, se activa posibilidad de registro de usuario con firebase y login con el mismo.
+
+[33mcommit ae2ab096bf6b0cbbee8ed0430e0c322486aadf06[m
+Author: DeathScript <robochoa@est.ecotec.edu.ec>
+Date:   Sun Dec 30 23:29:09 2018 -0500
+
+    [Add]: LogIn Screen with Firebase
+    
+    Pantalla de LogIn con Firebase, por terminar inicio de sesion con Google
+
+[33mcommit 5739ad6fd5dda6afa76a528e86b483343c1b315a[m
+Author: DeathScript <robochoa@est.ecotec.edu.ec>
+Date:   Sat Dec 29 16:11:13 2018 -0500
+
+    [Add]: Card item
+    
+    Item de card para agregar ubicaciones con leyendas UI.
+
+[33mcommit 116b6f5bfb3ff43792402c8455bf1b85d529b3cc[m
+Author: DeathScript <robochoa@est.ecotec.edu.ec>
+Date:   Fri Dec 28 17:56:42 2018 -0500
+
+    [Add]: NavigationBarUI
+    
+    Se agrega la barra inferior de navegacion con opciones: home, busqueda, amigos, y configuracion
+
+[33mcommit 0f8b5db438999d32ae54c0ceee1a9d6a06d387a9[m
+Author: DeathScript <robochoa@est.ecotec.edu.ec>
+Date:   Wed Nov 28 16:55:56 2018 -0500
+
+    Initial commit
