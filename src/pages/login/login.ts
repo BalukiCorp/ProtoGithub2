@@ -20,16 +20,16 @@ import {LogoutPage} from "../logout/logout";
 })
 export class LoginPage {
 
-    loginForm: FormGroup;
-    loginError: string;
+  loginForm: FormGroup;
+  loginError: string;
 
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private auth:AuthService, fb: FormBuilder) {
-              this.loginForm = fb.group({
-                email:['', Validators.compose([Validators.required, Validators.email])],
-                password: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
-              });
+    this.loginForm = fb.group({
+      email:['', Validators.compose([Validators.required, Validators.email])],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
+    });
   }
 
   login(){
@@ -45,14 +45,15 @@ export class LoginPage {
     };
 
     this.auth.signInWithEmail(credentials)
-        .then(
-          () => this.navCtrl.setRoot(LogoutPage),
-          error => this.loginError = error.message,
-        );
+      .then(
+        () => this.navCtrl.setRoot(LogoutPage),
+        error => this.loginError = error.message,
+      );
   }
 
   loginWithGoogle(){
-      this.auth.signInWithGoogle().then(
+    this.auth.signInWithGoogle()
+      .then(
         ()=> this.navCtrl.setRoot(LogoutPage),
         error => console.log(error.message)
       );

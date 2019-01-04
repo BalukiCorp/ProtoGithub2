@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {HomePage} from "../home/home";
 import {LoginPage} from "../login/login";
 import {LogoutPage} from "../logout/logout";
+import {AddEventPage} from "../add-event/add-event";
 
 
 @IonicPage()
@@ -14,6 +15,7 @@ export class TabsPage {
     homeRoot = HomePage;
     profileRoot = LoginPage;
     settingsRoot = LogoutPage;
+    addEventRoot = AddEventPage;
 
 
 

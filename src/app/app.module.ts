@@ -16,6 +16,7 @@ import {AuthService} from "../services/auth.service";
 import {SignUpPage} from "../pages/sign-up/sign-up";
 import {NgxErrorsModule} from "@ultimate/ngxerrors";
 import {LogoutPage} from "../pages/logout/logout";
+import {AddEventPage} from "../pages/add-event/add-event";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {LogoutPage} from "../pages/logout/logout";
     TabsPage,
     SignUpPage,
     LogoutPage,
+    AddEventPage
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ import {LogoutPage} from "../pages/logout/logout";
     TabsPage,
     SignUpPage,
     LogoutPage,
+    AddEventPage
   ],
   providers: [
     StatusBar,
