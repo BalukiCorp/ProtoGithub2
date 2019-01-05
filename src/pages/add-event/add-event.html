@@ -14,5 +14,76 @@
 
 
 <ion-content padding>
+  
+  <ion-list>
+    <ion-item>
+    
+      <ion-input placeholder="nombre del evento" [(ngModel)]="event_name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      
+      <ion-input placeholder="organizador" [(ngModel)]="manager_name"></ion-input>
+    </ion-item>
+  
+    
+  
+    <ion-item>
+      <ion-label>Categoría</ion-label>
+  <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="category">
+    <ion-option value="PARTY">PARTY</ion-option>
+    <ion-option value="FESTIVITIES">FESTIVITIES</ion-option>
+    <ion-option value="SPORTS">SPORTS</ion-option>
+    <ion-option value="EDUCATION">EDUCATION</ion-option>
+    <ion-option value="SPORTS">GASTRONOMY</ion-option>
+    <ion-option value="SPORTS">CULTURE</ion-option>
+    <ion-option value="SPORTS">CONCERTS</ion-option>
+
+    
+
+  </ion-select>
+  
+</ion-item>
+
+<ion-item>
+      
+    <ion-input placeholder="ubicación" [(ngModel)]="ubication"></ion-input>
+  </ion-item>    
+
+    <ion-item>
+        <ion-label>Día del evento</ion-label>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="date"></ion-datetime>
+      </ion-item>
+
+  <ion-item>
+      <ion-label>Hora del evento</ion-label>
+    <ion-datetime okText="Ok" cancelText="Cancelar" displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="hour"></ion-datetime>
+    
+  </ion-item>
+
+ 
+    <!--  <ion-item>
+        <ion-card *ngFor="let registro of registro">
+
+            <ion-card-header>
+             Registrado con exito con nombre: {{registro.nombre}},
+             correo: {{registro.usuario}} y genero {{registro.genero}} 
+            </ion-card-header>
+          
+            <ion-card-content>
+               Add card content here! 
+            </ion-card-content>
+          
+          </ion-card>
+
+
+
+    </ion-item>
+  -->
+    <button ion-button ion-button round full color = "trycolor" (click)="sendRegister()">Registrar evento </button>
+  
+
+</ion-list>
+   
 
 </ion-content>
