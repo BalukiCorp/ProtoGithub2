@@ -9,15 +9,56 @@
 <ion-content padding>
 
 
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let item of items">
+        {{ item }}
+      </ion-item>
+    </ion-list>
+
+
     <ion-buttons>
     <ion-card>
       <ion-img  height="100%" width="100%" src="../../assets/imgs/img_6447.jpg"></ion-img>
       <ion-card-header>
         <ion-card-title>Guayaquil</ion-card-title>
         <!-- Se coloca un query con el date y cambiar a ion-datetime -->
-        <h1>31 DIC</h1>
+        <h1>19 DIC</h1>
       </ion-card-header>
       <ion-card-content>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-img  height="100%" width="100%" src="../../assets/imgs/img_6447.jpg"></ion-img>
+      <ion-card-header>
+        <ion-card-title>Quito</ion-card-title>
+        <!-- Se coloca un query con el date y cambiar a ion-datetime -->
+        <h1>30 DIC</h1>
+      </ion-card-header>
+      <ion-card-content>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorehe 1500s</ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-img  height="100%" width="100%" src="../../assets/imgs/img_6447.jpg"></ion-img>
+      <ion-card-header>
+        <ion-card-title>Cuenca</ion-card-title>
+        <!-- Se coloca un query con el date y cambiar a ion-datetime -->
+        <h1>10 DIC</h1>
+      </ion-card-header>
+      <ion-card-content>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has beethe 1500s</ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-img  height="100%" width="100%" src="../../assets/imgs/img_6447.jpg"></ion-img>
+      <ion-card-header>
+        <ion-card-title>Machala</ion-card-title>
+        <!-- Se coloca un query con el date y cambiar a ion-datetime -->
+        <h1>8 DIC</h1>
+      </ion-card-header>
+      <ion-card-content>Loremand typesetting industry.
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</ion-card-content>
     </ion-card>
 </ion-buttons>
