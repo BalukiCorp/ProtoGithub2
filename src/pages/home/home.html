@@ -9,23 +9,25 @@
 <ion-content padding>
 
 
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <!--  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
     <ion-list>
       <ion-item *ngFor="let item of items">
         {{ item }}
       </ion-item>
     </ion-list>
-
+-->
 
     <ion-buttons>
-    <ion-card>
+    <ion-card *ngFor="let register of register">
       <ion-img  height="100%" width="100%" src="../../assets/imgs/img_6447.jpg"></ion-img>
-      <ion-card-header>
-        <ion-card-title>Guayaquil</ion-card-title>
+      <ion-card-header >
+        <ion-card-title>{{register.event_name}}</ion-card-title>
         <!-- Se coloca un query con el date y cambiar a ion-datetime -->
-        <h1>19 DIC</h1>
+        <h1>Día: {{register.date}}</h1>
+        <h2>Hora: {{register.hour}}</h2>
+        <h3>Ubicación: {{register.ubication}}</h3>        
       </ion-card-header>
-      <ion-card-content>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      <ion-card-content>Organizador: {{register.manager_name}}
         </ion-card-content>
     </ion-card>
 

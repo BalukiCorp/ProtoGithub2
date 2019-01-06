@@ -4,6 +4,7 @@ import {HomePage} from "../home/home";
 import {LoginPage} from "../login/login";
 import {LogoutPage} from "../logout/logout";
 import {AddEventPage} from "../add-event/add-event";
+import { BusquedaPage } from '../busqueda/busqueda';
 
 
 @IonicPage()
@@ -16,7 +17,7 @@ export class TabsPage {
     profileRoot = LoginPage;
     settingsRoot = LogoutPage;
     addEventRoot = AddEventPage;
-
+    searchRoot = BusquedaPage;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

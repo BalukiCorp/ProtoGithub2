@@ -1,19 +1,29 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+//import {AddEventPage} from '../add-event/add-event'
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  items;
+  event_name: string = '';
+  manager_name: string = '';
+  category: string = '';
+  hour: string = '';
+  ubication: string = '';
+  date: string = '';
+  today = Date.now();
+  register = [];
+ // items;
 
   constructor(public navCtrl: NavController) {
-      this.initializeItems();
+    this.getEvent();
+    //  this.initializeItems();
   }
 
-  initializeItems() {
+ /* initializeItems() {
     this.items = [
       'Fiestas',
       'Festivales',
@@ -22,8 +32,20 @@ export class HomePage {
 
     ];
   }
+*/
+  getEvent(){
+    var registerRef = firebase.database().ref().child("event_register");
 
-  getItems(ev) {
+    registerRef.on("value", (snap) => {
+      var dataInDatabase = snap.val();
+      this.register = [];
+      for(var key in dataInDatabase){
+        this.register.push(dataInDatabase[key]);
+      }
+    });
+  }
+
+  /*getItems(ev) {
     // Reset items back to all of the items
     this.initializeItems();
 
@@ -37,5 +59,5 @@ export class HomePage {
       })
     }
   }
-  
+  */
 }
