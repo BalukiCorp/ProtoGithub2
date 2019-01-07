@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content  class="card-background-page" padding >
 
     <ion-searchbar (ionInput)="getEvent($event)"></ion-searchbar>
     <ion-list>
@@ -21,6 +21,20 @@
        <button> {{register.category}} </button>
       </ion-item>
     </ion-list>
+
+
+    <ion-card class="fiestas">
+      <img src="../../assets/imgs/fiestas.jpg"/>
+      <div class="card-title">Fiestas</div>
+      <div class="card-subtitle">41 Listings</div>
+    </ion-card>
+  
+    <ion-card class="conciertos">
+      <img src="../../assets/imgs/conciertos.jpg"/>
+      <div class="card-title">Conciertos</div>
+      <div class="card-subtitle">64 Listings</div>
+    </ion-card>
+
 <!--
     <ion-list>
 
@@ -84,4 +98,5 @@
     </ion-item>
   -->
     
+
 </ion-content>
