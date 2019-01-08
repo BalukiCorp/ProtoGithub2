@@ -18,6 +18,7 @@ import {NgxErrorsModule} from "@ultimate/ngxerrors";
 import {LogoutPage} from "../pages/logout/logout";
 import {AddEventPage} from "../pages/add-event/add-event";
 import { BusquedaPage } from '../pages/busqueda/busqueda';
+import {RankingPage} from '../pages/ranking/ranking';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BusquedaPage } from '../pages/busqueda/busqueda';
     SignUpPage,
     LogoutPage,
     AddEventPage,
-    BusquedaPage
+    BusquedaPage,
+    RankingPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { BusquedaPage } from '../pages/busqueda/busqueda';
     SignUpPage,
     LogoutPage,
     AddEventPage,
-    BusquedaPage
+    BusquedaPage,
+    RankingPage
   ],
   providers: [
     StatusBar,
