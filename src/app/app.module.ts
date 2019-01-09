@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import {LoginPage} from '../pages/login/login';
+
 
 import{AngularFireModule} from 'angularfire2';
 import {AngularFireAuth} from 'angularfire2/auth';
@@ -19,6 +19,8 @@ import {LogoutPage} from "../pages/logout/logout";
 import {AddEventPage} from "../pages/add-event/add-event";
 import { BusquedaPage } from '../pages/busqueda/busqueda';
 import {RankingPage} from '../pages/ranking/ranking';
+import {ProfilePage} from "../pages/profile/profile";
+import {LoginPage} from "../pages/login/login";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import {RankingPage} from '../pages/ranking/ranking';
     LogoutPage,
     AddEventPage,
     BusquedaPage,
-    RankingPage
+    RankingPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import {RankingPage} from '../pages/ranking/ranking';
     LogoutPage,
     AddEventPage,
     BusquedaPage,
-    RankingPage
+    RankingPage,
+    ProfilePage,
   ],
   providers: [
     StatusBar,
