@@ -1,4 +1,4 @@
-/*import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import { Platform, MenuController,Nav, NavParams} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -37,4 +37,3 @@ export class MyApp {
 
 }
 
-*/

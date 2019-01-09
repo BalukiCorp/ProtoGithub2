@@ -47,7 +47,7 @@
 
 <ion-item>
       
-    <ion-input type="text" formControlName="ubication" placeholder="ubicación" [(ngModel)]="ubication"></ion-input>
+    <ion-input clearInput type="text" formControlName="ubication" placeholder="ubicación" [(ngModel)]="ubication"></ion-input>
   </ion-item>    
 
     <ion-item>
@@ -77,12 +77,12 @@
 
   <ion-item>
     
-    <ion-input formControlName="description" placeholder="descripción del evento" [(ngModel)]="description"></ion-input>
+    <ion-input clearInput formControlName="description" placeholder="descripción del evento" [(ngModel)]="description"></ion-input>
   </ion-item>
 
   <ion-item>
       
-    <ion-input formControlName="value" type="tel" placeholder="Costo " [(ngModel)]="value"></ion-input>
+    <ion-input clearInput formControlName="value" type="tel" placeholder="Costo " [(ngModel)]="value"></ion-input>
   </ion-item>
     <!--  <ion-item>
         <ion-card *ngFor="let registro of registro">
