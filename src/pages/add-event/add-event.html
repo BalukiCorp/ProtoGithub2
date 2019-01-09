@@ -17,8 +17,10 @@
   <form [formGroup]="orderForm" (ngSubmit)="submit();">
   <ion-list>
     <ion-item>
-    <ion-label floating >Nombre del evento</ion-label>
-      <ion-input type="text" formControlName="event_name"  name = "name"   [(ngModel)]="event_name"></ion-input>
+    
+    <ion-icon name="contact" item-start></ion-icon>
+
+      <ion-input type="text" formControlName="event_name"  name = "name" placeholder="nombre"  [(ngModel)]="event_name"></ion-input>
     </ion-item>
   
     <ion-item>
@@ -29,6 +31,8 @@
     
   
     <ion-item>
+        <ion-icon name="clipboard" item-start></ion-icon>
+
       <ion-label>Categoría</ion-label>
   <ion-select formControlName="category" okText="Ok" cancelText="Cancelar" [(ngModel)]="category">
     <ion-option value="PARTY">PARTY</ion-option>
@@ -46,29 +50,33 @@
 </ion-item>
 
 <ion-item>
-      
+  <ion-icon name="locate" item-start></ion-icon>
+
     <ion-input clearInput type="text" formControlName="ubication" placeholder="ubicación" [(ngModel)]="ubication"></ion-input>
   </ion-item>    
 
     <ion-item>
         <ion-icon name="calendar" item-start></ion-icon>
         <ion-label>Día del evento</ion-label>        
-        <ion-datetime formControlName="date" displayFormat="MM-DD-YYYY" placeholder="MM-DD-YYY" [(ngModel)]="date"></ion-datetime>
+        <ion-datetime formControlName="date" displayFormat="MM-DD-YYYY" placeholder="MES-DÍA-AÑO" [(ngModel)]="date"></ion-datetime>
       </ion-item>
 
       <ion-item>
           <ion-icon name="calendar" item-start></ion-icon>
         <ion-label>Día de finalización del evento</ion-label>
-        <ion-datetime formControlName="final_date" displayFormat="MM-DD-YYYY" placeholder="MM-DD-YYY" [(ngModel)]="final_date"></ion-datetime>
+        <ion-datetime formControlName="final_date" displayFormat="MM-DD-YYYY" placeholder="MES-DÍA-AÑO" [(ngModel)]="final_date"></ion-datetime>
       </ion-item>
 
   <ion-item>
+      <ion-icon name="time" item-start></ion-icon>
+
       <ion-label>Hora del evento</ion-label>
     <ion-datetime formControlName="hour" okText="Ok" cancelText="Cancelar" displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="hour"></ion-datetime>
     
   </ion-item>
 
   <ion-item>
+      <ion-icon name="time" item-start></ion-icon>
 
     <ion-label>Hora de finalización del evento</ion-label>
   <ion-datetime  formControlName="final_hour" okText="Ok" cancelText="Cancelar" displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="final_hour"></ion-datetime>
@@ -76,12 +84,14 @@
 </ion-item>
 
   <ion-item>
-    
+      <ion-icon name="book" item-start></ion-icon>
+
     <ion-input clearInput formControlName="description" placeholder="descripción del evento" [(ngModel)]="description"></ion-input>
   </ion-item>
 
   <ion-item>
-      
+      <ion-icon name="cash" item-start></ion-icon>
+
     <ion-input clearInput formControlName="value" type="tel" placeholder="Costo " [(ngModel)]="value"></ion-input>
   </ion-item>
     <!--  <ion-item>
