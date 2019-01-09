@@ -17,8 +17,8 @@
   <form [formGroup]="orderForm" (ngSubmit)="submit();">
   <ion-list>
     <ion-item>
-    
-      <ion-input type="text" formControlName="event_name" placeholder="nombre del evento" name = "name"   [(ngModel)]="event_name"></ion-input>
+    <ion-label floating >Nombre del evento</ion-label>
+      <ion-input type="text" formControlName="event_name"  name = "name"   [(ngModel)]="event_name"></ion-input>
     </ion-item>
   
     <ion-item>
