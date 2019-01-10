@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar no-border-bottom>
     <ion-title text-center>ranking</ion-title>
   </ion-navbar>
 
@@ -14,17 +14,27 @@
 
 
 <ion-content padding>
+
+    <ion-toolbar >
+        <ion-segment [(ngModel)]="pet">
+          <ion-segment-button value="puppies">
+            Usuarios
+          </ion-segment-button>
+          <ion-segment-button value="kittens">
+            Eventos
+          </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
   <ion-list>
 
     <ion-item>
       <ion-label>Seleccionar</ion-label>
-      <ion-select [(ngModel)]="notifications" interface="action-sheet">
-        <ion-option value="enable">Usuario</ion-option>
-        <ion-option value="mute">Evento</ion-option>
+      <ion-select [(ngModel)]="notifications1" interface="action-sheet">
+        <ion-option value="enable">Global</ion-option>
+        <ion-option value="mute">Categoria</ion-option>
       </ion-select>
     </ion-item>
+    
   </ion-list>
-
-  
   
 </ion-content>
