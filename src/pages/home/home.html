@@ -17,9 +17,9 @@
     </ion-list>
 -->
 
-    <ion-buttons>
+<ion-buttons>
     <ion-card *ngFor="let register of register">
-      <ion-img  height="100%" width="100%" src="../../assets/imgs/img_6447.jpg"></ion-img>
+      <ion-img  height="100%" width="100%" src="../../assets/imgs/img_6447.jpg"></ion-img> 
       <ion-card-header >
         <ion-card-title>{{register.event_name}}</ion-card-title>
         <!-- Se coloca un query con el date y cambiar a ion-datetime -->
@@ -30,7 +30,21 @@
         
       </ion-card-header>
       <ion-card-content>Organizador: {{register.manager_name}}
-        </ion-card-content>
+          <ion-row no-padding>
+              <ion-col text-right>
+                <button ion-button clear item-start small color="danger" icon-start>
+                  <ion-icon  name='heart'></ion-icon>
+                  Favorite
+                </button>
+              </ion-col>
+              <ion-col text-right>
+                <button end ion-button clear item-end small color="danger" icon-start>
+                  <ion-icon  name='share-alt'></ion-icon>
+                  Share
+                </button>
+              </ion-col>
+            </ion-row>
+      </ion-card-content>
     </ion-card>
 
     <ion-card>
