@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as firebase from 'firebase';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import {AngularFireStorage} from '@angular/fire/storage';
 /**
  * Generated class for the AddEventPage page.
  *
@@ -35,7 +35,7 @@ export class AddEventPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-    public formBuilder: FormBuilder) {
+    public formBuilder: FormBuilder, private storage: AngularFireStorage) {
 
       this.orderForm = this.formBuilder.group({
         event_name: ['', Validators.required],
@@ -79,6 +79,15 @@ value: this.value});
       //this.orderForm["event_name"].reset();
       this.orderForm.reset()
       console.log(this.orderForm.value);
+    }
+
+    onUpload(e){
+     //  console.log('subir', e);
+    const id = Math.random().toString(36).substring(2);
+    const file = e.target.files[0];
+    const filePath = "event_upload/profile_${id}";
+    const ref = this.storage.ref(filePath);
+    const task = this.storage.upload(filePath, file);
     }
   private createMyForm(){
     return this.formBuilder.group({

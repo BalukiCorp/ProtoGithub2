@@ -94,6 +94,11 @@
 
     <ion-input clearInput formControlName="value" type="tel" placeholder="Costo " [(ngModel)]="value"></ion-input>
   </ion-item>
+
+  <div class="form-group">
+
+<ion-input type="file" accept=".png, .jpg" (change)="onUpload"></ion-input>
+  </div>
     <!--  <ion-item>
         <ion-card *ngFor="let registro of registro">
 

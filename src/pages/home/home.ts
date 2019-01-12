@@ -2,12 +2,16 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 //import {AddEventPage} from '../add-event/add-event'
 import * as firebase from 'firebase';
-
+var imagenesFBRef;
+var imageneStorageRef;
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+   
+  imagenesFBRef = firebase.database().ref().child("imagenesFB");
+  strageRef = firebase.storage().ref().child("event_upload");
   event_name: string = '';
   manager_name: string = '';
   category: string = '';
@@ -45,6 +49,15 @@ export class HomePage {
     });
   }
 
+ viewImage(){
+     imageneStorageRef.on("value", function(snapshot){
+       
+     })
+     }
+  
+  NodeFirebase(nombreImagen, downloadUrl){
+    imagenesFBRef.push({nombre: nombreImagen, url: downloadUrl});
+  }
   /*getItems(ev) {
     // Reset items back to all of the items
     this.initializeItems();
