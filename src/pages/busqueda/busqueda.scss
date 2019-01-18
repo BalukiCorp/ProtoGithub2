@@ -9,16 +9,22 @@ page-busqueda {
       text-align: center;
     }
   
-    .card-title {
+    .card-title { 
       position: absolute;
-      top: 10%;
-      font-size: 1.0em;
-      width: 100px;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
       font-weight: bold;
-      color: #fff;
-      text-shadow: 6px 0 0 #000;
+      color:white;
+      text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
     }
   
- 
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
   
   }

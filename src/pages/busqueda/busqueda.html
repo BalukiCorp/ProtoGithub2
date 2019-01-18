@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content  class="card-background-page" padding >
+<ion-content  padding class="card-background-page">
  <!-- (ionInput)="getEvent($event)" -->
     <ion-searchbar ></ion-searchbar>
     <ion-list>
@@ -22,7 +22,7 @@
 
     <ion-card class="cards-list-demo">
         <ion-card-header>
-          Categorias
+          Populares
         </ion-card-header>
     
         <ion-list>
@@ -62,100 +62,29 @@
             </button>
     
         </ion-list>
+
       </ion-card>
 
-    <ion-grid>
-      <ion-row>
-        <ion-col col-6>
-          <ion-card text-center padding color="trycolor">         
-            <div class="card-title"></div>
-            <ion-icon name="beer"></ion-icon>
-          </ion-card>
-        </ion-col>
-        <ion-col col-6>
-          <ion-card text-center padding color="trycolor">   
-            <div class="card-title"></div>
-            <ion-icon name="color-palette"></ion-icon>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col col-6>
-          <ion-card text-center padding color="trycolor">
-            <div class="card-title"></div>
-            <ion-icon name="pizza"></ion-icon>
-          </ion-card>
-        </ion-col>
-        <ion-col col-6>
-          <ion-card text-center padding color="trycolor">
-            <div class="card-title"></div>
-            <ion-icon name="microphone"></ion-icon>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-<!--
-    <ion-list>
-
-        <ion-item>
-          <ion-label>Valor:</ion-label>
-          <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
-        </ion-item>
+        <ion-card>
+          <img src="../../assets/imgs/fiestas.jpg"/>
+          <div class="card-title">Fiestas</div>
+        </ion-card>
       
-        <ion-item>
+        <ion-card>
+          <img src="../../assets/imgs/conciertos.jpg"/>
+          <div class="card-title">Conciertos</div>
+        </ion-card>
       
-            <ion-input type="tel" placeholder="Costo:" [(ngModel)]="value"></ion-input>
-          </ion-item>
+        <ion-card>
+          <img src="../../assets/imgs/gastronomia.jpg"/>
+          <div class="card-title">Gastronomia</div>
+        </ion-card>
       
-        <ion-item>
-          <ion-label>Mushrooms</ion-label>
-          <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
-        </ion-item>
-      
-      </ion-list>
+        <ion-card>
+          <img src="../../assets/imgs/img_6447.jpg"/>
+          <div class="card-title">Festivales</div>
+        </ion-card>
 
--->
-      <!--  <ion-list>
-    <ion-item>
-    
-      <ion-input placeholder="nombre" [(ngModel)]="nombre"></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      
-      <ion-input type="tel" placeholder="usuario" [(ngModel)]="usuario"></ion-input>
-    </ion-item>
-  
-    
-  
-    <ion-item>
-      <ion-label>Genero</ion-label>
-  <ion-select okText="Ok" cancelText="Cancelar" [(ngModel)]="genero">
-    <ion-option value="H">HOMBRE</ion-option>
-    <ion-option value="M">MUJER</ion-option>
-    <ion-option value="O">OTRO</ion-option>
-    <ion-option value="E">EVENTO</ion-option>
-  </ion-select>
-    </ion-item>
-  -->
-  <!--  <ion-item>
-        <ion-card *ngFor="let registro of registro">
-
-            <ion-card-header>
-             Registrado con exito con nombre: {{registro.nombre}},
-             correo: {{registro.usuario}} y genero {{registro.genero}} 
-            </ion-card-header>
-          
-            <ion-card-content>
-               Add card content here! 
-            </ion-card-content>
-          
-          </ion-card>
-
-
-
-    </ion-item>
-  -->
     
 
 </ion-content>
