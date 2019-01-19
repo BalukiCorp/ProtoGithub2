@@ -1,7 +1,13 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-//import {AddEventPage} from '../add-event/add-event'
+import { Component, OnInit } from '@angular/core';
+import { NavController, normalizeURL } from 'ionic-angular';
+import {AddEventPage} from '../add-event/add-event'
 import * as firebase from 'firebase';
+import{AuthService} from '../../services/auth.service';
+//import {Observable} from 'rxjs-compat/Observable';
+import {Observable} from 'rxjs/observable';
+import { AddEventPageModule } from '../add-event/add-event.module';
+import { UserInterface } from '../../app/models/user';
+
 var imagenesFBRef;
 var imageneStorageRef;
 @Component({
@@ -22,11 +28,13 @@ export class HomePage {
   register = [];
  // items;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController ) {
     this.getEvent();
     //  this.initializeItems();
   }
-
+user: UserInterface={
+  photoUrl:''
+}
  /* initializeItems() {
     this.items = [
       'Fiestas',
@@ -38,26 +46,21 @@ export class HomePage {
   }
 */
   getEvent(){
-    var registerRef = firebase.database().ref().child("event_register");
-
+    var registerRef = firebase.database().ref().child("event_register");    
     registerRef.on("value", (snap) => {
+      
       var dataInDatabase = snap.val();
       this.register = [];
+      this.user.photoUrl = this.user.photoUrl;
       for(var key in dataInDatabase){
         this.register.push(dataInDatabase[key]);
+        this.user.photoUrl = this.user.photoUrl;
+                
       }
     });
   }
 
- viewImage(){
-     imageneStorageRef.on("value", function(snapshot){
-       
-     })
-     }
-  
-  NodeFirebase(nombreImagen, downloadUrl){
-    imagenesFBRef.push({nombre: nombreImagen, url: downloadUrl});
-  }
+ 
   /*getItems(ev) {
     // Reset items back to all of the items
     this.initializeItems();

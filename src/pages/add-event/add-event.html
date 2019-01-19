@@ -97,8 +97,10 @@
 
   <div class="form-group">
 
-<ion-input type="file" accept=".png, .jpg" (change)="onUpload"></ion-input>
+<ion-input type="file" accept=".png, .jpg" (change)="onUpload($event)"></ion-input>
   </div>
+<ion-input #imageUser type="hidden" [value]="urlImage | async"></ion-input>
+
     <!--  <ion-item>
         <ion-card *ngFor="let registro of registro">
 
