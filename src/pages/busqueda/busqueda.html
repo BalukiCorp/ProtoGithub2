@@ -15,76 +15,84 @@
 
 <ion-content  padding class="card-background-page">
  <!-- (ionInput)="getEvent($event)" -->
-    <ion-searchbar ></ion-searchbar>
+    <ion-searchbar></ion-searchbar>
     <ion-list>
      
     </ion-list>
 
-    <ion-card class="cards-list-demo">
-        <ion-card-header>
-          Populares
-        </ion-card-header>
-    
-        <ion-list>
-          <button ion-item>
-            <ion-icon name='beer' item-start></ion-icon>
-            Fiestas
-          </button>
-    
-          <button ion-item>
-            <ion-icon name='people' item-start></ion-icon>
-            Festivales
-          </button>
-    
-          <button ion-item>
-            <ion-icon name='book' item-start></ion-icon>
-            Educacion
-          </button>
-    
-          <button ion-item>
-            <ion-icon name='pizza' item-start></ion-icon>
-            Gastronomia
-          </button>
-    
-          <button ion-item>
-            <ion-icon name='color-palette' item-start></ion-icon>
-            Cultura
-          </button>
-    
-          <button ion-item>
-            <ion-icon name='microphone' item-start></ion-icon>
-            Conciertos
-          </button>
+    <div class="mbsc-padding">
+        <h3 text-align:center >Populares</h3>
+        <mbsc-scrollview [options]="settings">
+            <mbsc-scrollview-item mbsc-card *ngFor="let bird of birds" class="scroll">
+                <img [src]="bird.img" draggable="false" >
+                <mbsc-card-content>{{bird.name}}</mbsc-card-content>
+            </mbsc-scrollview-item>
+        </mbsc-scrollview>  
+    </div>
 
-          <button ion-item>
-              <ion-icon name='football' item-start></ion-icon>
-              Deportes
-            </button>
-    
-        </ion-list>
+    <h2 color="white">Categorias</h2>
 
-      </ion-card>
+      <div cards>
+          <div class="grid-full">
+              <ion-row>
+                <ion-col>
+                  <ion-card>
+                      <img src="../../assets/imgs/fiestas.jpg"/>
+                      <div class="card-title">Fiestas</div>
+                  </ion-card>
+                </ion-col>
+        
+                <ion-col>
+                  <ion-card>
+                      <img src="../../assets/imgs/conciertos.jpg"/>
+                      <div class="card-title">Conciertos</div>
+                  </ion-card>
+                </ion-col>
+        
+                <ion-col>
+                  <ion-card>
+                      <img src="../../assets/imgs/gastronomia.jpg"/>
+                      <div class="card-title">Gastronomia</div>
+                  </ion-card>
+                </ion-col>
+        
+                <ion-col>
+                  <ion-card>
+                      <img src="../../assets/imgs/img_6447.jpg"/>
+                      <div class="card-title">Festivales</div>
+                  </ion-card>
+                </ion-col>
 
-        <ion-card>
-          <img src="../../assets/imgs/fiestas.jpg"/>
-          <div class="card-title">Fiestas</div>
-        </ion-card>
-      
-        <ion-card>
-          <img src="../../assets/imgs/conciertos.jpg"/>
-          <div class="card-title">Conciertos</div>
-        </ion-card>
-      
-        <ion-card>
-          <img src="../../assets/imgs/gastronomia.jpg"/>
-          <div class="card-title">Gastronomia</div>
-        </ion-card>
-      
-        <ion-card>
-          <img src="../../assets/imgs/img_6447.jpg"/>
-          <div class="card-title">Festivales</div>
-        </ion-card>
+                <ion-col>
+                    <ion-card>
+                        <img src="../../assets/imgs/cultura.jpg"/>
+                        <div class="card-title">Cultura</div>
+                    </ion-card>
+                </ion-col>
 
-    
+                <ion-col>
+                    <ion-card>
+                        <img src="../../assets/imgs/deportes.jpg"/>
+                        <div class="card-title">Deportes</div>
+                    </ion-card>
+                </ion-col>
+
+                <ion-col>
+                    <ion-card>
+                        <img src="../../assets/imgs/educacion.jpg"/>
+                        <div class="card-title">Educacion</div>
+                    </ion-card>
+                </ion-col>
+
+                <ion-col>
+                    <ion-card>
+                        <img src="../../assets/imgs/empresarial.jpg"/>
+                        <div class="card-title">Empresarial</div>
+                    </ion-card>
+                </ion-col>
+              </ion-row>
+            </div>
+      </div>
+ 
 
 </ion-content>

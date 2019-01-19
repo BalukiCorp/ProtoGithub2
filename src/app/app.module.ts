@@ -1,3 +1,5 @@
+import { MbscModule } from '@mobiscroll/angular';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -35,7 +37,9 @@ import {LoginPage} from "../pages/login/login";
     RankingPage,
     ProfilePage
   ],
-  imports: [
+  imports: [ 
+    MbscModule, 
+    FormsModule, 
     BrowserModule,
     NgxErrorsModule,
     AngularFireModule.initializeApp(firebaseConfig.fire),

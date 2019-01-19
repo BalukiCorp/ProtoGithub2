@@ -16,7 +16,7 @@ import { ProfilePage } from '../profile/profile';
 })
 export class TabsPage {
     homeRoot = HomePage;
-    profileRoot = LoginPage;
+    profileRoot = ProfilePage;
     settingsRoot = LogoutPage;
     addEventRoot = AddEventPage;
     searchRoot = BusquedaPage;

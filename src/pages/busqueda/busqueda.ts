@@ -3,12 +3,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as firebase from 'firebase';
 import {storage, initializeApp} from 'firebase';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { mobiscroll} from '@mobiscroll/angular';
+
 /**
  * Generated class for the BusquedaPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
+
+mobiscroll.settings = {
+  theme: 'ios'
+}
 
 @IonicPage()
 @Component({
@@ -29,6 +35,45 @@ export class BusquedaPage {
    usuario: string= "";
  //  registro = [];
 items;
+
+birds = [{
+  img: 'https://img.mobiscroll.com/demos/gridlayout/toucan.jpg',
+  name: 'Lost Beach'
+}, {
+  img: 'https://img.mobiscroll.com/demos/gridlayout/kingfisher.jpg',
+  name: 'Guayarte'
+}, {
+  img: 'https://img.mobiscroll.com/demos/gridlayout/swift.jpg',
+  name: 'PartyLoL'
+}, {
+  img: 'https://img.mobiscroll.com/demos/gridlayout/humming.jpg',
+  name: 'Humming bird'
+}, {
+  img: 'https://img.mobiscroll.com/demos/gridlayout/columbidae.jpg',
+  name: 'Columbidae'
+}, {
+  img: 'https://img.mobiscroll.com/demos/gridlayout/hornbill.jpg',
+  name: 'Hornbill'
+}, {
+  img: 'https://img.mobiscroll.com/demos/gridlayout/spoonbill.jpg',
+  name: 'Spoonbill'
+}, {
+  img: 'https://img.mobiscroll.com/demos/gridlayout/bee-eater.jpg',
+  name: 'Bee-eater'
+}, {
+  img: 'https://img.mobiscroll.com/demos/gridlayout/parrot.jpg',
+  name: 'Parrot'
+}, {
+  img: 'https://img.mobiscroll.com/demos/gridlayout/goose.jpg',
+  name: 'Goose bird'
+}, {
+  img: 'https://img.mobiscroll.com/demos/gridlayout/woodpecker.jpg',
+  name: 'Woodpecker'
+}, {
+  img: 'https://img.mobiscroll.com/demos/gridlayout/penguin.jpg',
+  name: 'Penguin'
+}]
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.getEvent();
@@ -91,6 +136,9 @@ items;
     });
     
   }
+
+  
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BusquedaPage');

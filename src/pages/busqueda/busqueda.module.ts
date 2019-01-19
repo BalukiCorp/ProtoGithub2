@@ -1,3 +1,5 @@
+import { FormsModule } from '@angular/forms';
+import { MbscModule } from '@mobiscroll/angular';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { BusquedaPage } from './busqueda';
@@ -6,7 +8,9 @@ import { BusquedaPage } from './busqueda';
   declarations: [
     BusquedaPage,
   ],
-  imports: [
+  imports: [ 
+    FormsModule, 
+    MbscModule,
     IonicPageModule.forChild(BusquedaPage),
   ],
 })
