@@ -6,6 +6,7 @@ import {LogoutPage} from "../logout/logout";
 import {AddEventPage} from "../add-event/add-event";
 import { BusquedaPage } from '../busqueda/busqueda';
 import {RankingPage} from '../ranking/ranking';
+import { ProfilePage } from '../profile/profile';
 
 
 @IonicPage()
