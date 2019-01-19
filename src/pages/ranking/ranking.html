@@ -14,27 +14,44 @@
 
 
 <ion-content padding>
-
-    <ion-toolbar >
-        <ion-segment [(ngModel)]="pet">
-          <ion-segment-button value="puppies">
-            Usuarios
-          </ion-segment-button>
-          <ion-segment-button value="kittens">
-            Eventos
-          </ion-segment-button>
-        </ion-segment>
-    </ion-toolbar>
   <ion-list>
 
     <ion-item>
       <ion-label>Seleccionar</ion-label>
       <ion-select [(ngModel)]="notifications1" interface="action-sheet">
+        <ion-option value="enable">Evento</ion-option>
+        <ion-option value="mute">Usuario</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Seleccionar</ion-label>
+      <ion-select [(ngModel)]="notifications2" interface="action-sheet">
         <ion-option value="enable">Global</ion-option>
         <ion-option value="mute">Categoria</ion-option>
       </ion-select>
     </ion-item>
     
   </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Category</ion-label>
+      <ion-select name = "category">
+        <ion-option value = "fiestas">Fiestas</ion-option>
+        <ion-option value = "festivales">Festivales</ion-option>
+        <ion-option value = "educacion">Educacion</ion-option>
+        <ion-option value = "gastronomia">Gastronomia</ion-option>
+        <ion-option value = "cultura">Cultura</ion-option>
+        <ion-option value = "conciertos">Conciertos</ion-option>
+        <ion-option value = "deportes">Conciertos</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
   
+  <div id="app"> 
+  </div>
+   
+
 </ion-content>
