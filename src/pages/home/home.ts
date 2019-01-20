@@ -32,9 +32,9 @@ export class HomePage {
     this.getEvent();
     //  this.initializeItems();
   }
-user: UserInterface={
+/*user: UserInterface={
   photoUrl:''
-}
+}*/
 
 
  /* initializeItems() {

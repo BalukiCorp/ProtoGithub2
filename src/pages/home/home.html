@@ -19,8 +19,8 @@
 
 <ion-buttons>
     <ion-card *ngFor="let register of register">
-  <ion-img height="100%" width="100%" src="{{register.photoURL}}"></ion-img>
- <!--     <ion-img  height="100%" width="100%" src="../../assets/imgs/img_6447.jpg"></ion-img> -->
+  <img height="100%" width="100%" src="{{register.photoURL}}">
+ <!--     <img  height="100%" width="100%" src="../../assets/imgs/img_6447.jpg"> -->
       <ion-card-header >
         <ion-card-title>{{register.event_name}}</ion-card-title>
         <!-- Se coloca un query con el date y cambiar a ion-datetime -->

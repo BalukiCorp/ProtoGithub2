@@ -23,6 +23,9 @@ import { BusquedaPage } from '../pages/busqueda/busqueda';
 import {RankingPage} from '../pages/ranking/ranking';
 import {ProfilePage} from "../pages/profile/profile";
 import {LoginPage} from "../pages/login/login";
+import {NG_VALUE_ACCESSOR, ControlValueAccessor} from "@angular/forms";
+
+
 
 @NgModule({
   declarations: [
@@ -64,7 +67,8 @@ import {LoginPage} from "../pages/login/login";
     SplashScreen,
     AngularFireAuth,
     AuthService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: NG_VALUE_ACCESSOR, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
+//ErrorHandler

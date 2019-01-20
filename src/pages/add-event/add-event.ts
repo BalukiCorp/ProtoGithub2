@@ -8,6 +8,7 @@ import {Observable} from 'rxjs/Observable';
 import { pipe } from 'rxjs';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {NG_VALUE_ACCESSOR, ControlValueAccessor} from "@angular/forms";
 
 /**
  * Generated class for the AddEventPage page.
@@ -95,7 +96,6 @@ sendRegister() {
      category: this.category, hour: this.hour, ubication: this.ubication, date: this.date,
      description: this.description, final_date: this.final_date, final_hour: this.final_hour,
      value: this.value, photoURL: textInput.value
- 
    }); 
 }
   

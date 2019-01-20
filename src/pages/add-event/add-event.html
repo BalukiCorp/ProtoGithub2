@@ -96,12 +96,14 @@
   </ion-item>
 
    
-
+<div class="form-group">
 <ion-input type="file" accept=".png, .jpg" (change)="onUpload($event)"></ion-input>
 <!--<ion-input type="file" name="fichero" value="" id="fichero"></ion-input>-->
-  
+</div>
 <input id="imageUser" type="hidden" [value]="urlImage | async">
-    <!--  <ion-item>
+
+
+<!--  <ion-item>
         <ion-card *ngFor="let registro of registro">
 
             <ion-card-header>
