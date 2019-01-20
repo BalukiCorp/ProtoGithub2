@@ -95,12 +95,12 @@
     <ion-input clearInput formControlName="value" type="tel" placeholder="Costo " [(ngModel)]="value"></ion-input>
   </ion-item>
 
-  <div class="form-group">
+   
 
 <ion-input type="file" accept=".png, .jpg" (change)="onUpload($event)"></ion-input>
-  </div>
-<ion-input #imageUser type="hidden" [value]="urlImage | async"></ion-input>
-
+<!--<ion-input type="file" name="fichero" value="" id="fichero"></ion-input>-->
+  
+<input id="imageUser" type="hidden" [value]="urlImage | async">
     <!--  <ion-item>
         <ion-card *ngFor="let registro of registro">
 

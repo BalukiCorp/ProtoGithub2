@@ -35,6 +35,8 @@ export class HomePage {
 user: UserInterface={
   photoUrl:''
 }
+
+
  /* initializeItems() {
     this.items = [
       'Fiestas',
@@ -51,10 +53,10 @@ user: UserInterface={
       
       var dataInDatabase = snap.val();
       this.register = [];
-      this.user.photoUrl = this.user.photoUrl;
+      //this.user.photoUrl = this.user.photoUrl;
       for(var key in dataInDatabase){
         this.register.push(dataInDatabase[key]);
-        this.user.photoUrl = this.user.photoUrl;
+        //this.user.photoUrl = this.user.photoUrl;
                 
       }
     });

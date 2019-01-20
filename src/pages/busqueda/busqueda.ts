@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as firebase from 'firebase';
 import {storage, initializeApp} from 'firebase';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-import { mobiscroll} from '@mobiscroll/angular';
+import { mobiscroll} from '@mobiscroll/angular-lite';
 
 /**
  * Generated class for the BusquedaPage page.
