@@ -20,15 +20,7 @@
      
     </ion-list>
 
-    <div class="mbsc-padding">
-        <h3 class="titulo" >Populares</h3>
-        <mbsc-scrollview [options]="settings">
-            <mbsc-scrollview-item mbsc-card *ngFor="let bird of birds" class="scroll">
-                <img [src]="bird.img" draggable="false" >
-                <mbsc-card-content>{{bird.name}}</mbsc-card-content>
-            </mbsc-scrollview-item>
-        </mbsc-scrollview>  
-    </div>
+    
 
     <h2 class="titulo" color="white">Categorias</h2>
 

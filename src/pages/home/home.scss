@@ -1,10 +1,23 @@
 page-home {
 
+    
 }
 
-.fab-map {
-    top: calc(100% - 35px);
-    z-index: 50;
-    color: white;
-    background-color: #3498db;
+
+.cardstyle{
+    position: center;
+    padding-block-end: 5px;
+    width: 315px;
+    height: auto;
+    padding: 0px;
+    display: inline-block;
+    border-radius: 4%;
+    border: 1px solid #fff;
+    margin: 1rem;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(226, 225, 225, 0.25), 0 8px 8px rgba(206, 204, 204, 0.22);
+}
+
+.imagestyle{
+    border-radius: 4%;
 }
