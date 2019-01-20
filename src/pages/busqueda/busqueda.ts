@@ -47,10 +47,10 @@ birds = [{
   name: 'PartyLoL'
 }, {
   img: 'https://img.mobiscroll.com/demos/gridlayout/humming.jpg',
-  name: 'Humming bird'
+  name: 'FiestaWo'
 }, {
   img: 'https://img.mobiscroll.com/demos/gridlayout/columbidae.jpg',
-  name: 'Columbidae'
+  name: 'MetaFest'
 }, {
   img: 'https://img.mobiscroll.com/demos/gridlayout/hornbill.jpg',
   name: 'Hornbill'
