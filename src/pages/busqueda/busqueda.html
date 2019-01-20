@@ -21,7 +21,7 @@
     </ion-list>
 
     <div class="mbsc-padding">
-        <h3 text-align:center >Populares</h3>
+        <h3 class="titulo" >Populares</h3>
         <mbsc-scrollview [options]="settings">
             <mbsc-scrollview-item mbsc-card *ngFor="let bird of birds" class="scroll">
                 <img [src]="bird.img" draggable="false" >
@@ -30,7 +30,7 @@
         </mbsc-scrollview>  
     </div>
 
-    <h2 color="white">Categorias</h2>
+    <h2 class="titulo" color="white">Categorias</h2>
 
       <div cards>
           <div class="grid-full">
@@ -90,6 +90,21 @@
                         <div class="card-title">Empresarial</div>
                     </ion-card>
                 </ion-col>
+
+                <ion-col>
+                    <ion-card>
+                        <img src="../../assets/imgs/arte.jpg"/>
+                        <div class="card-title">Arte</div>
+                    </ion-card>
+                </ion-col>
+
+                <ion-col>
+                    <ion-card>
+                        <img src="../../assets/imgs/promociones.jpg"/>
+                        <div class="card-title">Promociones</div>
+                    </ion-card>
+                </ion-col>
+
               </ion-row>
             </div>
       </div>
